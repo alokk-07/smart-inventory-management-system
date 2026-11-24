@@ -1,0 +1,13 @@
+
+import axios from "axios";
+
+const API = "http://localhost:5000/api/auth";
+
+export const loginAdmin = async (email, password) => {
+    const response = await axios.post(`${API}/login`, {
+        email,
+        password
+    });
+
+    return response.data;
+};
